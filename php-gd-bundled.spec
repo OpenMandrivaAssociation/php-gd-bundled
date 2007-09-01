@@ -1,6 +1,6 @@
 Summary:	GD extension module for PHP
 Name:		php-gd-bundled
-Version:	5.2.3
+Version:	5.2.4
 Release:	%mkrel 1
 Group:		Development/PHP
 URL:		http://www.php.net
@@ -38,6 +38,8 @@ features to be merged upstream into the "official" libgd very soon.
 cp -dpR %{_usrsrc}/php-devel/extensions/gd/* .
 
 %build
+%serverbuild
+
 export LIBS="$LIBS -lm"
 
 phpize
