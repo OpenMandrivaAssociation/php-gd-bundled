@@ -1,6 +1,6 @@
 Summary:	GD extension module for PHP
 Name:		php-gd-bundled
-Version:	5.2.4
+Version:	5.2.5
 Release:	%mkrel 1
 Group:		Development/PHP
 URL:		http://www.php.net
@@ -69,6 +69,18 @@ install -m755 gd.so %{buildroot}%{_libdir}/php/extensions/gd-bundled.so
 cat > %{buildroot}%{_sysconfdir}/php.d/23_gd-bundled.ini << EOF
 extension = gd-bundled.so
 EOF
+
+%post
+if [ -f /var/lock/subsys/httpd ]; then
+    %{_initrddir}/httpd restart >/dev/null || :
+fi
+
+%postun
+if [ "$1" = "0" ]; then
+    if [ -f /var/lock/subsys/httpd ]; then
+	%{_initrddir}/httpd restart >/dev/null || :
+    fi
+fi
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
