@@ -12,6 +12,7 @@ BuildRequires:  libjpeg-devel
 BuildRequires:  libpng-devel 
 BuildRequires:  libxpm-devel
 Provides:	php-gd
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 This is a dynamic shared object (DSO) for PHP that will add GD support,
