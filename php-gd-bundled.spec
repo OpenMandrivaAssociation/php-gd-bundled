@@ -1,7 +1,7 @@
 Summary:	GD extension module for PHP
 Name:		php-gd-bundled
-Version:	5.2.5
-Release:	%mkrel 2
+Version:	5.2.6
+Release:	%mkrel 1
 Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
@@ -12,7 +12,7 @@ BuildRequires:  libjpeg-devel
 BuildRequires:  libpng-devel 
 BuildRequires:  libxpm-devel
 Provides:	php-gd
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This is a dynamic shared object (DSO) for PHP that will add GD support,
