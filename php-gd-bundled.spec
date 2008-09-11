@@ -1,7 +1,7 @@
 Summary:	GD extension module for PHP
 Name:		php-gd-bundled
 Version:	5.2.6
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
@@ -11,7 +11,9 @@ BuildRequires:  freetype2-devel
 BuildRequires:  libjpeg-devel
 BuildRequires:  libpng-devel 
 BuildRequires:  libxpm-devel
-Provides:	php-gd
+BuildRequires:	t1lib-devel
+Provides:	php-gd = 0:%{version}-%{release}
+Conflicts:	php-gd < 0:5.2.6-1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -51,7 +53,8 @@ phpize
     --with-xpm-dir=%{_prefix}/X11R6 \
     --with-ttf=%{_prefix} \
     --with-freetype-dir=%{_prefix} \
-    --enable-gd-native-ttf 
+    --enable-gd-native-ttf \
+    --with-t1lib=%{_prefix}
 
 %make
 
@@ -59,7 +62,7 @@ mv modules/*.so .
 chrpath -d gd.so
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot} 
+rm -rf %{buildroot} 
 
 install -d %{buildroot}%{_libdir}/php/extensions
 install -d %{buildroot}%{_sysconfdir}/php.d
@@ -83,7 +86,7 @@ if [ "$1" = "0" ]; then
 fi
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
