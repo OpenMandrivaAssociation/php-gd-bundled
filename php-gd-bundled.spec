@@ -1,7 +1,7 @@
 Summary:	GD extension module for PHP
 Name:		php-gd-bundled
-Version:	5.2.6
-Release:	%mkrel 3
+Version:	5.2.7
+Release:	%mkrel 1
 Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
