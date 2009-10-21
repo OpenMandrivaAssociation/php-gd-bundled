@@ -1,7 +1,7 @@
 Summary:	GD extension module for PHP
 Name:		php-gd-bundled
 Version:	5.3.1
-Release:	%mkrel 0.0.RC1.1
+Release:	%mkrel 0.0.RC1.2
 Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
@@ -9,7 +9,7 @@ BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:  X11-devel
 BuildRequires:  freetype2-devel
 BuildRequires:  libjpeg-devel
-BuildRequires:  libpng-devel 
+BuildRequires:  libpng-devel
 BuildRequires:  libxpm-devel
 BuildRequires:	t1lib-devel
 Provides:	php-gd = 0:%{version}-%{release}
