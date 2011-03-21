@@ -1,6 +1,6 @@
 Summary:	GD extension module for PHP
 Name:		php-gd-bundled
-Version:	5.3.5
+Version:	5.3.6
 Release:	%mkrel 1
 Group:		Development/PHP
 URL:		http://www.php.net
