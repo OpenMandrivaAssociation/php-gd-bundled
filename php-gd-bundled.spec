@@ -6,7 +6,7 @@ Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
 BuildRequires:	php-devel >= 3:5.2.0
-BuildRequires:  X11-devel
+BuildRequires:  pkgconfig(x11)
 BuildRequires:  jpeg-devel
 BuildRequires:  pkgconfig(freetype2)
 BuildRequires:  pkgconfig(libpng)
