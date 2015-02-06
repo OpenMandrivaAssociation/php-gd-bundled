@@ -1,7 +1,7 @@
 Summary:	GD extension module for PHP
 Name:		php-gd-bundled
 Version:	5.4.4
-Release:	2
+Release:	3
 Group:		Development/PHP
 URL:		http://www.php.net
 License:	PHP License
