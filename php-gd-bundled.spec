@@ -3,7 +3,7 @@ Name:		php-gd-bundled
 Version:	5.4.4
 Release:	3
 Group:		Development/PHP
-URL:		http://www.php.net
+URL:		https://www.php.net
 License:	PHP License
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:  pkgconfig(x11)
